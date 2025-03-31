@@ -1,0 +1,29 @@
+{
+  "monster": [
+    {
+      "name": "Dragão de Chocolate",
+      "source": "Seu Nome Aqui",
+      "page": 1,
+      "size": "Grande",
+      "type": "monstrosidade",
+      "alignment": ["N"],
+      "ac": [{"ac": 15, "from": ["escamas de chocolate"]}],
+      "hp": {"average": 120},
+      "speed": {"walk": 30},
+      "str": 18,
+      "dex": 12,
+      "con": 16,
+      "int": 8,
+      "wis": 10,
+      "cha": 14,
+      "action": [
+        {
+          "name": "Ataque de Confeito",
+          "entries": [
+            "O dragão faz um atque de mordida. Acerto: {@h}7d6 + 4 de dano de açúcar."
+          ]
+        }
+      ]
+    }
+  ]
+}
