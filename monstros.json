@@ -1,29 +1,129 @@
 {
   "monster": [
     {
-      "name": "Dragão de Chocolate",
-      "source": "Seu Nome Aqui",
+      "name": "Anatoly Belozersky",
+      "source": "Homebrew",
       "page": 1,
-      "size": "Grande",
-      "type": "monstrosidade",
-      "alignment": ["N"],
-      "ac": [{"ac": 15, "from": ["escamas de chocolate"]}],
-      "hp": {"average": 120},
+      "size": "Médio",
+      "type": "humanoide",
+      "alignment": ["LE"],
+      "ac": [{"ac": 18, "from": ["armadura"]}],
+      "hp": {
+        "average": 170,
+        "formula": "15d8 + 60"
+      },
       "speed": {"walk": 30},
-      "str": 18,
-      "dex": 12,
-      "con": 16,
-      "int": 8,
-      "wis": 10,
-      "cha": 14,
-      "action": [
+      "str": 14,
+      "dex": 16,
+      "con": 14,
+      "int": 20,
+      "wis": 18,
+      "cha": 18,
+      "save": ["INT +10", "WIS +9", "CHA +9"],
+      "resist": ["veneno", "concussão, perfuração e corte de ataques não mágicos"],
+      "conditionImmune": ["encantado", "amedrontado", "envenenado"],
+      "passive": 16,
+      "languages": ["—"],
+      "cr": "13",
+      "xp": 10000,
+      "pb": 5,
+      "trait": [
         {
-          "name": "Ataque de Confeito",
+          "name": "Lealdade Inquebrável",
           "entries": [
-            "O dragão faz um atque de mordida. Acerto: {@h}7d6 + 4 de dano de açúcar."
+            "Anatoly tem vantagem em testes de resistência enquanto estiver a 30 ft. de Vargas. Se Vargas morrer, Anatoly ganha +2 em acertos e dano, mas perde imunidade a medo."
+          ]
+        },
+        {
+          "name": "Estratégia do Sangue",
+          "entries": [
+            "Como uma reação, Anatoly pode redirecionar um ataque contra Vargas para si mesmo, recebendo metade do dano."
+          ]
+        },
+        {
+          "name": "Ordem do Senhor (3/Dia)",
+          "entries": [
+            "Como ação bônus, aliados em 60 ft. ganham vantagem no próximo ataque ou teste de habilidade."
+          ],
+          "usages": 3,
+          "recharge": "day"
+        },
+        {
+          "name": "Marca do Subjugado",
+          "entries": [
+            "Quando Anatoly reduz um inimigo a 0 PV, aliados vampíricos que passarem a 10 ft. do cadáver curam 10 PV."
           ]
         }
-      ]
+      ],
+      "action": [
+        {
+          "name": "Multiataque",
+          "entries": [
+            "Anatoly faz três ataques com Lâmina da Obediência ou dois ataques e usa Dominação Tática."
+          ]
+        },
+        {
+          "name": "Lâmina da Obediência",
+          "entries": [
+            "Ataque corpo a corpo com arma: {@hit}9 para acertar, alcance 5 ft., um alvo. Acerto: {@damage}2d10 + 3 de dano cortante mais {@damage}2d6 de dano necrótico. O alvo deve obter sucesso num teste de Sabedoria {@dc}16 ou seguir uma ordem simples de Anatoly até o fim do turno."
+          ]
+        },
+        {
+          "name": "Dominação Tática",
+          "entries": [
+            "Uma criatura a 30 ft. deve ser bem-sucedida num teste de Carisma {@dc}16 ou ficar encantada e mover-se até seu limite de velocidade em direção escolhida por Anatoly."
+          ]
+        },
+        {
+          "name": "Grito do Dever",
+          "entries": [
+            "Todos aliados a 30 ft. podem usar sua reação para atacar um inimigo designado (Recarga 5–6)."
+          ],
+          "recharge": "Recharge 5-6"
+        }
+      ],
+      "legendary": [
+        {
+          "name": "Sacrifício Estratégico",
+          "entries": [
+            "Um aliado humanoide a 5 ft. recebe o ataque. Anatoly cura PV igual à metade do dano."
+          ]
+        },
+        {
+          "name": "Chicote de Comando",
+          "entries": [
+            "Aliados a 60 ft. ganham +4 no próximo ataque. Inimigos sofrem desvantagem no próximo teste."
+          ]
+        },
+        {
+          "name": "Vínculo Inquebrantável (2 Ações)",
+          "entries": [
+            "Teleporta-se para adjacente a Vargas e ganha PV temporários igual ao nível de desafio de Vargas × 10."
+          ]
+        }
+      ],
+      "lairActions": {
+        "description": "Na Fortaleza de Vargas, no turno 20 de cada combate, Anatoly pode usar:",
+        "traits": [
+          {
+            "name": "Muralha de Escudos",
+            "entries": ["Cria parede espectral (AC 18, 50 PV) protegendo aliados."]
+          },
+          {
+            "name": "Chamado dos Leais",
+            "entries": ["1d4 vampiro spawn aparecem."]
+          },
+          {
+            "name": "Estratagema Final",
+            "entries": ["Aliados humanos ganham ação bônus para atacar."]
+          }
+        ]
+      },
+      "fluff": {
+        "entries": [
+          "Conselheiro político e braço direito de Vargas Vallokovich. Anatoly representa a força da mente - um intelectual arrogante que acredita estar acima das massas. Suas políticas buscam progresso científico em Vallaki, equilibrando as impulsividades de Vargas."
+        ]
+      }
     }
   ]
 }
